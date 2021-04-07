@@ -18,6 +18,8 @@
             "/home/xs107-bairoy/xenonstack/l2/module4/spark/.bloop/spark/scala-2.12/classes",
             "/home/xs107-bairoy/.sbt/boot/scala-2.12.13/lib/scala-library.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-core_2.12/3.1.1/spark-core_2.12-3.1.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-sql_2.12/3.1.1/spark-sql_2.12-3.1.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-streaming_2.12/3.1.1/spark-streaming_2.12-3.1.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/avro/avro/1.8.2/avro-1.8.2.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/avro/avro-mapred/1.8.2/avro-mapred-1.8.2-hadoop2.jar",
@@ -74,6 +76,14 @@
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-tags_2.12/3.1.1/spark-tags_2.12-3.1.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-crypto/1.1.0/commons-crypto-1.1.0.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/univocity/univocity-parsers/2.9.1/univocity-parsers-2.9.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-sketch_2.12/3.1.1/spark-sketch_2.12-3.1.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-catalyst_2.12/3.1.1/spark-catalyst_2.12-3.1.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-core/1.5.12/orc-core-1.5.12.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-mapreduce/1.5.12/orc-mapreduce-1.5.12.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/hive/hive-storage-api/2.7.2/hive-storage-api-2.7.2.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-column/1.10.1/parquet-column-1.10.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-hadoop/1.10.1/parquet-hadoop-1.10.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar",
@@ -104,6 +114,21 @@
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/glassfish/hk2/hk2-locator/2.6.1/hk2-locator-2.6.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/javassist/javassist/3.25.0-GA/javassist-3.25.0-GA.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-paranamer/2.10.0/jackson-module-paranamer-2.10.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.16/janino-3.0.16.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.16/commons-compiler-3.0.16.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.8-1/antlr4-runtime-4.8-1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-vector/2.0.0/arrow-vector-2.0.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-memory-netty/2.0.0/arrow-memory-netty-2.0.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-shims/1.5.12/orc-shims-1.5.12.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/io/airlift/aircompressor/0.10/aircompressor-0.10.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/threeten/threeten-extra/1.5.0/threeten-extra-1.5.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-common/1.10.1/parquet-common-1.10.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-encoding/1.10.1/parquet-encoding-1.10.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-format/2.4.0/parquet-format-2.4.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-jackson/1.10.1/parquet-jackson-1.10.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/guava/guava/16.0.1/guava-16.0.1.jar",
@@ -116,7 +141,6 @@
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-configuration2/2.1.1/commons-configuration2-2.1.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/re2j/re2j/1.1/re2j-1.1.jar",
-            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/hadoop/hadoop-auth/3.2.0/hadoop-auth-3.2.0.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/curator/curator-client/2.13.0/curator-client-2.13.0.jar",
@@ -136,6 +160,9 @@
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/glassfish/hk2/external/aopalliance-repackaged/2.6.1/aopalliance-repackaged-2.6.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/glassfish/hk2/hk2-api/2.6.1/hk2-api-2.6.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/glassfish/hk2/hk2-utils/2.6.1/hk2-utils-2.6.1.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-format/2.0.0/arrow-format-2.0.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-memory-core/2.0.0/arrow-memory-core-2.0.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/flatbuffers/flatbuffers-java/1.9.0/flatbuffers-java-1.9.0.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/eclipse/jetty/jetty-security/9.3.24.v20180605/jetty-security-9.3.24.v20180605.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/nimbusds/nimbus-jose-jwt/4.41.1/nimbus-jose-jwt-4.41.1.jar",
@@ -250,7 +277,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/home/xs107-bairoy/Downloads/jdk-11.0.10+9",
+                "home": "/home/xs107-bairoy/binaries/jdk-11.0.10+9",
                 "options": [
                     "-Duser.dir=/home/xs107-bairoy/xenonstack/l2/module4/spark"
                 ]
@@ -292,6 +319,23 @@
                             "name": "spark-core_2.12",
                             "classifier": "sources",
                             "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-core_2.12/3.1.1/spark-core_2.12-3.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.spark",
+                    "name": "spark-sql_2.12",
+                    "version": "3.1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spark-sql_2.12",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-sql_2.12/3.1.1/spark-sql_2.12-3.1.1.jar"
+                        },
+                        {
+                            "name": "spark-sql_2.12",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-sql_2.12/3.1.1/spark-sql_2.12-3.1.1-sources.jar"
                         }
                     ]
                 },
@@ -1231,6 +1275,142 @@
                     ]
                 },
                 {
+                    "organization": "com.univocity",
+                    "name": "univocity-parsers",
+                    "version": "2.9.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "univocity-parsers",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/univocity/univocity-parsers/2.9.1/univocity-parsers-2.9.1.jar"
+                        },
+                        {
+                            "name": "univocity-parsers",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/univocity/univocity-parsers/2.9.1/univocity-parsers-2.9.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.spark",
+                    "name": "spark-sketch_2.12",
+                    "version": "3.1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spark-sketch_2.12",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-sketch_2.12/3.1.1/spark-sketch_2.12-3.1.1.jar"
+                        },
+                        {
+                            "name": "spark-sketch_2.12",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-sketch_2.12/3.1.1/spark-sketch_2.12-3.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.spark",
+                    "name": "spark-catalyst_2.12",
+                    "version": "3.1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spark-catalyst_2.12",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-catalyst_2.12/3.1.1/spark-catalyst_2.12-3.1.1.jar"
+                        },
+                        {
+                            "name": "spark-catalyst_2.12",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-catalyst_2.12/3.1.1/spark-catalyst_2.12-3.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.orc",
+                    "name": "orc-core",
+                    "version": "1.5.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "orc-core",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-core/1.5.12/orc-core-1.5.12.jar"
+                        },
+                        {
+                            "name": "orc-core",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-core/1.5.12/orc-core-1.5.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.orc",
+                    "name": "orc-mapreduce",
+                    "version": "1.5.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "orc-mapreduce",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-mapreduce/1.5.12/orc-mapreduce-1.5.12.jar"
+                        },
+                        {
+                            "name": "orc-mapreduce",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-mapreduce/1.5.12/orc-mapreduce-1.5.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.hive",
+                    "name": "hive-storage-api",
+                    "version": "2.7.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "hive-storage-api",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/hive/hive-storage-api/2.7.2/hive-storage-api-2.7.2.jar"
+                        },
+                        {
+                            "name": "hive-storage-api",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/hive/hive-storage-api/2.7.2/hive-storage-api-2.7.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.parquet",
+                    "name": "parquet-column",
+                    "version": "1.10.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "parquet-column",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-column/1.10.1/parquet-column-1.10.1.jar"
+                        },
+                        {
+                            "name": "parquet-column",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-column/1.10.1/parquet-column-1.10.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.parquet",
+                    "name": "parquet-hadoop",
+                    "version": "1.10.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "parquet-hadoop",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-hadoop/1.10.1/parquet-hadoop-1.10.1.jar"
+                        },
+                        {
+                            "name": "parquet-hadoop",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-hadoop/1.10.1/parquet-hadoop-1.10.1-sources.jar"
+                        }
+                    ]
+                },
+                {
                     "organization": "org.codehaus.jackson",
                     "name": "jackson-core-asl",
                     "version": "1.9.13",
@@ -1741,6 +1921,261 @@
                     ]
                 },
                 {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parser-combinators_2.12",
+                    "version": "1.1.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-parser-combinators_2.12",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar"
+                        },
+                        {
+                            "name": "scala-parser-combinators_2.12",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.janino",
+                    "name": "janino",
+                    "version": "3.0.16",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "janino",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.16/janino-3.0.16.jar"
+                        },
+                        {
+                            "name": "janino",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.16/janino-3.0.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.janino",
+                    "name": "commons-compiler",
+                    "version": "3.0.16",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-compiler",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.16/commons-compiler-3.0.16.jar"
+                        },
+                        {
+                            "name": "commons-compiler",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.16/commons-compiler-3.0.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.antlr",
+                    "name": "antlr4-runtime",
+                    "version": "4.8-1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "antlr4-runtime",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.8-1/antlr4-runtime-4.8-1.jar"
+                        },
+                        {
+                            "name": "antlr4-runtime",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.8-1/antlr4-runtime-4.8-1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.arrow",
+                    "name": "arrow-vector",
+                    "version": "2.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "arrow-vector",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-vector/2.0.0/arrow-vector-2.0.0.jar"
+                        },
+                        {
+                            "name": "arrow-vector",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-vector/2.0.0/arrow-vector-2.0.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.arrow",
+                    "name": "arrow-memory-netty",
+                    "version": "2.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "arrow-memory-netty",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-memory-netty/2.0.0/arrow-memory-netty-2.0.0.jar"
+                        },
+                        {
+                            "name": "arrow-memory-netty",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-memory-netty/2.0.0/arrow-memory-netty-2.0.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.orc",
+                    "name": "orc-shims",
+                    "version": "1.5.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "orc-shims",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-shims/1.5.12/orc-shims-1.5.12.jar"
+                        },
+                        {
+                            "name": "orc-shims",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/orc/orc-shims/1.5.12/orc-shims-1.5.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.protobuf",
+                    "name": "protobuf-java",
+                    "version": "2.5.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "protobuf-java",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar"
+                        },
+                        {
+                            "name": "protobuf-java",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-lang",
+                    "name": "commons-lang",
+                    "version": "2.6",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar"
+                        },
+                        {
+                            "name": "commons-lang",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.airlift",
+                    "name": "aircompressor",
+                    "version": "0.10",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "aircompressor",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/io/airlift/aircompressor/0.10/aircompressor-0.10.jar"
+                        },
+                        {
+                            "name": "aircompressor",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/io/airlift/aircompressor/0.10/aircompressor-0.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.threeten",
+                    "name": "threeten-extra",
+                    "version": "1.5.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "threeten-extra",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/threeten/threeten-extra/1.5.0/threeten-extra-1.5.0.jar"
+                        },
+                        {
+                            "name": "threeten-extra",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/threeten/threeten-extra/1.5.0/threeten-extra-1.5.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.parquet",
+                    "name": "parquet-common",
+                    "version": "1.10.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "parquet-common",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-common/1.10.1/parquet-common-1.10.1.jar"
+                        },
+                        {
+                            "name": "parquet-common",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-common/1.10.1/parquet-common-1.10.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.parquet",
+                    "name": "parquet-encoding",
+                    "version": "1.10.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "parquet-encoding",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-encoding/1.10.1/parquet-encoding-1.10.1.jar"
+                        },
+                        {
+                            "name": "parquet-encoding",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-encoding/1.10.1/parquet-encoding-1.10.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.parquet",
+                    "name": "parquet-format",
+                    "version": "2.4.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "parquet-format",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-format/2.4.0/parquet-format-2.4.0.jar"
+                        },
+                        {
+                            "name": "parquet-format",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-format/2.4.0/parquet-format-2.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.parquet",
+                    "name": "parquet-jackson",
+                    "version": "1.10.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "parquet-jackson",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-jackson/1.10.1/parquet-jackson-1.10.1.jar"
+                        },
+                        {
+                            "name": "parquet-jackson",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/parquet/parquet-jackson/1.10.1/parquet-jackson-1.10.1-sources.jar"
+                        }
+                    ]
+                },
+                {
                     "organization": "com.esotericsoftware",
                     "name": "minlog",
                     "version": "1.3.0",
@@ -1941,23 +2376,6 @@
                             "name": "re2j",
                             "classifier": "sources",
                             "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/re2j/re2j/1.1/re2j-1.1-sources.jar"
-                        }
-                    ]
-                },
-                {
-                    "organization": "com.google.protobuf",
-                    "name": "protobuf-java",
-                    "version": "2.5.0",
-                    "configurations": "default",
-                    "artifacts": [
-                        {
-                            "name": "protobuf-java",
-                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar"
-                        },
-                        {
-                            "name": "protobuf-java",
-                            "classifier": "sources",
-                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0-sources.jar"
                         }
                     ]
                 },
@@ -2281,6 +2699,57 @@
                             "name": "hk2-utils",
                             "classifier": "sources",
                             "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/glassfish/hk2/hk2-utils/2.6.1/hk2-utils-2.6.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.arrow",
+                    "name": "arrow-format",
+                    "version": "2.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "arrow-format",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-format/2.0.0/arrow-format-2.0.0.jar"
+                        },
+                        {
+                            "name": "arrow-format",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-format/2.0.0/arrow-format-2.0.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.arrow",
+                    "name": "arrow-memory-core",
+                    "version": "2.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "arrow-memory-core",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-memory-core/2.0.0/arrow-memory-core-2.0.0.jar"
+                        },
+                        {
+                            "name": "arrow-memory-core",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/arrow/arrow-memory-core/2.0.0/arrow-memory-core-2.0.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.flatbuffers",
+                    "name": "flatbuffers-java",
+                    "version": "1.9.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "flatbuffers-java",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/flatbuffers/flatbuffers-java/1.9.0/flatbuffers-java-1.9.0.jar"
+                        },
+                        {
+                            "name": "flatbuffers-java",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/flatbuffers/flatbuffers-java/1.9.0/flatbuffers-java-1.9.0-sources.jar"
                         }
                     ]
                 },
@@ -2825,6 +3294,23 @@
                             "name": "jline",
                             "classifier": "sources",
                             "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/jline/jline/0.9.94/jline-0.9.94-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.spark",
+                    "name": "spark-streaming_2.12",
+                    "version": "3.1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spark-streaming_2.12",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-streaming_2.12/3.1.1/spark-streaming_2.12-3.1.1.jar"
+                        },
+                        {
+                            "name": "spark-streaming_2.12",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-streaming_2.12/3.1.1/spark-streaming_2.12-3.1.1-sources.jar"
                         }
                     ]
                 },

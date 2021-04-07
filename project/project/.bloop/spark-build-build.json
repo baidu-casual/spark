@@ -199,7 +199,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/home/xs107-bairoy/Downloads/jdk-11.0.10+9",
+                "home": "/home/xs107-bairoy/binaries/jdk-11.0.10+9",
                 "options": [
                     "-Duser.dir=/home/xs107-bairoy/xenonstack/l2/module4/spark/project/project"
                 ]

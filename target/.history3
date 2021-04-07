@@ -10,3 +10,7 @@
 1617713357664:data := Array(1, 2, 3, 4, 5);
 1617713362383:run
 1617713545167:exit
+1617774254429:import org.apache.spark.SparkContext\nimport org.apache.spark.SparkContext._\nimport org.apache.spark.SparkConf
+1617774291797:val conf = new SparkConf().setAppName("Simple Spark SQL Application With RDD To DF")\n\n        // sc is an existing SparkContext.\n        val sc = new SparkContext(conf)\n\n        val sqlContext = new SQLContext(sc)\n\n        // this is used to implicitly convert an RDD to a DataFrame.\n        import sqlContext.implicits._
+1617774334092:val conf = new SparkConf().setAppName("Simple Spark SQL Application With RDD To DF");\n        val sc = new SparkContext(conf);\n        val sqlContext = new SQLContext(sc);
+1617774897289:exit
