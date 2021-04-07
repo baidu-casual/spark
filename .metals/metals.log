@@ -18440,3 +18440,173 @@ Starting thread that pumps server stdout and redirects it to the client stdout..
 [0m2021.04.07 12:22:50 INFO  time: compiled spark in 1.04s[0m
 [0m2021.04.07 12:23:08 INFO  compiling spark (1 scala source)[0m
 [0m2021.04.07 12:23:08 INFO  time: compiled spark in 0.78s[0m
+[0m2021.04.07 12:25:19 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:25:19 INFO  time: compiled spark in 67ms[0m
+[0m2021.04.07 12:25:19 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:25:19 INFO  time: compiled spark in 24ms[0m
+[0m2021.04.07 12:25:19 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:25:19 INFO  time: compiled spark in 45ms[0m
+[0m2021.04.07 12:27:24 INFO  shutting down Metals[0m
+[0mNo more data in the server stdin, exiting...2021.04.07 12:27:24 
+INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...[0m
+No more data in the server stdin, exiting...2021.04.07 12:27:24
+ INFO  Shut down connection with build server.No more data in the server stdin, exiting...
+[0m
+[0m2021.04.07 12:27:24 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.04.07 12:37:38 INFO  Started: Metals version 0.10.1 in workspace '/home/xs107-bairoy/xenonstack/l2/module4/spark' for client vscode 1.53.2.[0m
+[0m2021.04.07 12:37:39 INFO  time: initialize in 1.18s[0m
+[0m2021.04.07 12:37:39 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher5561562777273824652/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.04.07 12:37:39 WARN  no build target for: /home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher5561562777273824652/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher5561562777273824652/bsp.socket...
+[0m2021.04.07 12:37:39 INFO  skipping build import with status 'Installed'[0m
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.07 12:37:40 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/xs107-bairoy/.cache/metals/bsp.trace.json[0m
+[0m2021.04.07 12:37:40 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher12746370015406662408/bsp.socket'...
+[0m2021.04.07 12:37:40 INFO  Attempting to connect to the build server...[0m
+Waiting for the bsp connection to come up...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher693644703125648012/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher693644703125648012/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher693644703125648012/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.07 12:37:40 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/xs107-bairoy/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher12746370015406662408/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher12746370015406662408/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.07 12:37:40 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/xs107-bairoy/.cache/metals/bsp.trace.json[0m
+[0m2021.04.07 12:37:40 INFO  time: Connected to build server in 0.2s[0m
+[0m2021.04.07 12:37:40 INFO  Connected to Build server: Bloop v1.4.8[0m
+[0m2021.04.07 12:37:41 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.04.07 12:37:44 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.04.07 12:37:44 INFO  time: code lens generation in 3.63s[0m
+[0m2021.04.07 12:37:45 INFO  time: code lens generation in 5.26s[0m
+[0m2021.04.07 12:37:46 INFO  time: indexed workspace in 4.21s[0m
+[0m2021.04.07 12:37:46 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:37:46 INFO  time: compiled spark in 0.2s[0m
+[0m2021.04.07 12:37:54 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:37:54 INFO  time: compiled spark in 58ms[0m
+[0m2021.04.07 12:37:54 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:37:54 INFO  time: compiled spark in 32ms[0m
+[0m2021.04.07 12:37:54 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:37:54 INFO  time: compiled spark in 32ms[0m
+[0m2021.04.07 12:38:07 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:07 INFO  time: compiled spark in 0.25s[0m
+[0m2021.04.07 12:38:07 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:07 INFO  time: compiled spark in 95ms[0m
+[0m2021.04.07 12:38:07 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:07 INFO  time: compiled spark in 0.1s[0m
+[0m2021.04.07 12:38:23 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:23 INFO  time: compiled spark in 0.24s[0m
+[0m2021.04.07 12:38:26 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:26 INFO  time: compiled spark in 0.13s[0m
+[0m2021.04.07 12:38:26 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:26 INFO  time: compiled spark in 94ms[0m
+[0m2021.04.07 12:38:36 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:36 INFO  time: compiled spark in 0.12s[0m
+[0m2021.04.07 12:38:36 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:36 INFO  time: compiled spark in 0.12s[0m
+[0m2021.04.07 12:38:36 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:36 INFO  time: compiled spark in 84ms[0m
+[0m2021.04.07 12:38:52 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:52 INFO  time: compiled spark in 0.13s[0m
+[0m2021.04.07 12:38:52 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:38:52 INFO  time: compiled spark in 97ms[0m
+[0m2021.04.07 12:39:09 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:09 INFO  time: compiled spark in 67ms[0m
+[0m2021.04.07 12:39:09 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:09 INFO  time: compiled spark in 34ms[0m
+[0m2021.04.07 12:39:20 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:20 INFO  time: compiled spark in 0.23s[0m
+[0m2021.04.07 12:39:27 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:27 INFO  time: compiled spark in 0.12s[0m
+[0m2021.04.07 12:39:27 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:27 INFO  time: compiled spark in 83ms[0m
+[0m2021.04.07 12:39:29 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:29 INFO  time: compiled spark in 86ms[0m
+[0m2021.04.07 12:39:29 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:29 INFO  time: compiled spark in 89ms[0m
+[0m2021.04.07 12:39:29 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:29 INFO  time: compiled spark in 0.1s[0m
+[0m2021.04.07 12:39:29 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:29 INFO  time: compiled spark in 87ms[0m
+[0m2021.04.07 12:39:29 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:29 INFO  time: compiled spark in 74ms[0m
+[0m2021.04.07 12:39:36 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:36 INFO  time: compiled spark in 0.14s[0m
+[0m2021.04.07 12:39:36 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:36 INFO  time: compiled spark in 0.23s[0m
+[0m2021.04.07 12:39:36 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:36 INFO  time: compiled spark in 0.11s[0m
+[0m2021.04.07 12:39:45 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:39:45 INFO  time: compiled spark in 0.82s[0m
+[0m2021.04.07 12:40:15 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:40:15 INFO  time: compiled spark in 0.86s[0m
+[0m2021.04.07 12:40:42 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:40:42 INFO  time: compiled spark in 0.13s[0m
+[0m2021.04.07 12:40:42 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:40:42 INFO  time: compiled spark in 95ms[0m
+[0m2021.04.07 12:40:42 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:40:42 INFO  time: compiled spark in 84ms[0m
+[0m2021.04.07 12:40:42 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:40:42 INFO  time: compiled spark in 78ms[0m
+[0m2021.04.07 12:41:35 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:41:35 INFO  time: compiled spark in 0.12s[0m
+[0m2021.04.07 12:41:35 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:41:35 INFO  time: compiled spark in 85ms[0m
+[0m2021.04.07 12:41:35 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:41:35 INFO  time: compiled spark in 89ms[0m
+[0m2021.04.07 12:41:43 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:41:43 INFO  time: compiled spark in 0.7s[0m
+[0m2021.04.07 12:41:58 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:41:58 INFO  time: compiled spark in 0.68s[0m
+[0m2021.04.07 12:42:15 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:42:15 INFO  time: compiled spark in 0.66s[0m
+[0m2021.04.07 12:44:22 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:44:22 INFO  time: compiled spark in 0.67s[0m
+[0m2021.04.07 12:44:51 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:44:51 INFO  time: compiled spark in 0.16s[0m
+[0m2021.04.07 12:44:51 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:44:51 INFO  time: compiled spark in 0.28s[0m
+[0m2021.04.07 12:44:51 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:44:51 INFO  time: compiled spark in 0.12s[0m
+[0m2021.04.07 12:44:51 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:44:51 INFO  time: compiled spark in 0.12s[0m
+[0m2021.04.07 12:44:53 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:44:53 INFO  time: compiled spark in 0.17s[0m
+[0m2021.04.07 12:44:53 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:44:53 INFO  time: compiled spark in 0.11s[0m
+[0m2021.04.07 12:44:53 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:44:53 INFO  time: compiled spark in 0.14s[0m
+[0m2021.04.07 12:45:17 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:45:17 INFO  time: compiled spark in 0.15s[0m
+[0m2021.04.07 12:45:17 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:45:17 INFO  time: compiled spark in 0.12s[0m
+[0m2021.04.07 12:45:17 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:45:17 INFO  time: compiled spark in 0.12s[0m
+[0m2021.04.07 12:45:19 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:45:19 INFO  time: compiled spark in 0.13s[0m
+[0m2021.04.07 12:45:19 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:45:19 INFO  time: compiled spark in 0.11s[0m
+[0m2021.04.07 12:45:19 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:45:19 INFO  time: compiled spark in 0.11s[0m
+[0m2021.04.07 12:45:30 INFO  compiling spark (1 scala source)[0m
+[0m2021.04.07 12:45:30 INFO  time: compiled spark in 0.87s[0m

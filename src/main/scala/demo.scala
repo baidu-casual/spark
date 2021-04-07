@@ -11,9 +11,6 @@ import org.apache.hadoop.io.Text
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat
 
-//import spark.implicits._
-
-
 case class Department(id: String, name: String)
 case class Employee(firstName: String, lastName: String, email: String, salary: Int)
 case class DepartmentWithEmployees(department: Department, employees: Seq[Employee])
@@ -65,14 +62,14 @@ class institute{
   }
 }
 
-object HelloWorld {
+
+object demo {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("Spark").setMaster("local");
     val sc = new SparkContext(conf)
 
-    val spark = SparkSession.builder().appName("Spark SQL basic example").config("spark.some.config.option", "some-value").getOrCreate()
+    val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
-
 
     val data = Array("Gaurav", "Rohan", "Anuj", "Aryan", "Rahul", "Rohan", "Rohan", "Gaurav", "Karan")
     val distData = sc.parallelize(data)
@@ -84,8 +81,11 @@ object HelloWorld {
 
     println("\n\n\n\n\n")
     println("Word-Count : "+count1.collect.foreach(println))
-    val df = count1.toDF("Word","WordCount")
-    df.show()
+
+    println("\n\n\n\n\n")
+    val df1 = count1.toDF("Name","Name-Count")
+    df1.show()
+
 
     val file = sc.textFile("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/test.txt")
     val words = file.flatMap(_.split(" "))
@@ -96,5 +96,9 @@ object HelloWorld {
 
     println("\n\n\n\n\n")
     println("Word-Count : "+count2.collect.foreach(println))
+
+    println("\n\n\n\n\n")
+    val df2 = count2.toDF("Word","Word-Count")
+    df2.show()
   }
 }
