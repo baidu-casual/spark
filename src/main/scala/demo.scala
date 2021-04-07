@@ -1,11 +1,13 @@
 package main
 
+
 import org.apache.spark.{SparkContext,SparkConf}
-import org.apache.spark.SparkContext._
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{Dataset, DataFrame, SparkSession}
+import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 import org.apache.spark.sql.types._
-import org.apache.spark.sql.functions._
+import org.apache.spark.SparkContext._
+
 import org.apache.hadoop.io.LongWritable
 import org.apache.hadoop.io.Text
 import org.apache.hadoop.conf.Configuration
@@ -34,7 +36,7 @@ class institute{
     assign
   }
 
-  def temp(): Unit = {
+  def temp1(): Unit = {
     val conf = new SparkConf().setAppName("Spark").setMaster("local");
     val sc = new SparkContext(conf)
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
@@ -72,15 +74,9 @@ class institute{
     val df2 = departmentsWithEmployeesSeq2.toDF()
     df2.show()
   }
-}
-
-
-object demo extends institute {
-  def main(args: Array[String]): Unit = {
-    /*
+  def temp2(): Unit = {
     val conf = new SparkConf().setAppName("Spark").setMaster("local");
     val sc = new SparkContext(conf)
-
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
 
@@ -122,8 +118,36 @@ object demo extends institute {
     df2.createOrReplaceTempView("Word")
     val sqlDF2 = spark.sql("SELECT * FROM Word where `Word-Count`>1")
     sqlDF2.show()
-*/
+  }
+  def temp3(): Unit = {
+    val conf = new SparkConf().setAppName("Spark").setMaster("local");
+    val sc = new SparkContext(conf)
+    val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
+    import spark.implicits._
+
+    val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/data.csv"
+    val df1 = spark.read.option("header", "true").format("csv").load(path).toDF()
+
+    df1.createOrReplaceTempView("Orders")
+    spark.sql("SELECT * FROM Orders").show()
+    spark.sql("SELECT * FROM Orders where status='pending'").show()
+    spark.sql("SELECT * FROM Orders where total>40").show()
+  }
+}
+
+//
+object demo extends institute {
+  def init(): Unit = {
+    val conf = new SparkConf().setAppName("Spark").setMaster("local");
+    val sc = new SparkContext(conf)
+    val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
+    import spark.implicits._
+  }
+  def main(args: Array[String]): Unit = {
+    //init()
     val institute1 = new institute
-    institute1.temp()
+    //institute1.temp1()
+    //institute1.temp2()
+    institute1.temp3()
   }
 }
