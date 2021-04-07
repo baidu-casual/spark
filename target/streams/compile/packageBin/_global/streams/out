@@ -2,6 +2,10 @@
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	main[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/institute$$typecreator29$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/institute$$typecreator29$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/institute$$typecreator5$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/institute$$typecreator5$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	main/Department.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/Department.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	main/DepartmentWithEmployees$.class[0m
@@ -14,14 +18,14 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/demo$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	main/institute.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/institute.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main/demo$$typecreator13$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/demo$$typecreator13$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/institute$$typecreator21$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/institute$$typecreator21$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	main/demo.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/demo.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main/demo$$typecreator5$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/demo$$typecreator5$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	main/DepartmentWithEmployees.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/DepartmentWithEmployees.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/institute$$typecreator13$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/institute$$typecreator13$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	main/Employee.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/xs107-bairoy/xenonstack/l2/module4/spark/target/scala-2.12/classes/main/Employee.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
