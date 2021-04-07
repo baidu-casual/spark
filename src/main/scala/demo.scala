@@ -7,17 +7,19 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 import org.apache.spark.sql.types._
 import org.apache.spark.SparkContext._
+import org.apache.spark.storage.StorageLevel
 
 import org.apache.hadoop.io.LongWritable
 import org.apache.hadoop.io.Text
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat
 
-case class Department(id: String, name: String)
-case class Employee(firstName: String, lastName: String, email: String, salary: Int)
-case class DepartmentWithEmployees(department: Department, employees: Seq[Employee])
+class institute
+case class Department(id: String, name: String) extends institute
+case class Employee(firstName: String, lastName: String, email: String, salary: Int) extends institute
+case class DepartmentWithEmployees(department: Department, employees: Seq[Employee]) extends institute
 
-class institute{
+class spark extends institute{
 
 
   def createEmployee(firstName: String, lastName: String, email: String, salary: Int): Employee = {
@@ -37,7 +39,7 @@ class institute{
   }
 
   def temp1(): Unit = {
-    val conf = new SparkConf().setAppName("Spark").setMaster("local");
+    val conf = new SparkConf().setAppName("Spark1").setMaster("local[1]");
     val sc = new SparkContext(conf)
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
@@ -57,7 +59,9 @@ class institute{
     val employee5 = new Employee("michael", "jackson", "no-reply@neverla.nd", 80000)
     val employee = Seq(employee1,employee2,employee3,employee4,employee5)
     val dfEmployee = employee.toDF()
+    val dsEmployee = dfEmployee.as[Employee]
     dfEmployee.show()
+    dsEmployee.show()
 
 
     val departmentWithEmployees1 = new DepartmentWithEmployees(department1, Seq(employee1, employee2))
@@ -73,9 +77,11 @@ class institute{
     val departmentsWithEmployeesSeq2 = Seq(departmentWithEmployees3, departmentWithEmployees4)
     val df2 = departmentsWithEmployeesSeq2.toDF()
     df2.show()
+
+    sc.stop()
   }
   def temp2(): Unit = {
-    val conf = new SparkConf().setAppName("Spark").setMaster("local");
+    val conf = new SparkConf().setAppName("Spark2").setMaster("local[2]");
     val sc = new SparkContext(conf)
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
@@ -118,9 +124,11 @@ class institute{
     df2.createOrReplaceTempView("Word")
     val sqlDF2 = spark.sql("SELECT * FROM Word where `Word-Count`>1")
     sqlDF2.show()
+
+    sc.stop()
   }
   def temp3(): Unit = {
-    val conf = new SparkConf().setAppName("Spark").setMaster("local");
+    val conf = new SparkConf().setAppName("Spark3").setMaster("local[3]");
     val sc = new SparkContext(conf)
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
@@ -128,26 +136,22 @@ class institute{
     val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/data.csv"
     val df1 = spark.read.option("header", "true").format("csv").load(path).toDF()
 
+    val dfPersist = df1.persist(StorageLevel.MEMORY_ONLY)
+    dfPersist.show(false)
+
     df1.createOrReplaceTempView("Orders")
-    spark.sql("SELECT * FROM Orders").show()
     spark.sql("SELECT * FROM Orders where status='pending'").show()
     spark.sql("SELECT * FROM Orders where total>40").show()
+    sc.stop()
   }
 }
 
 //
-object demo extends institute {
-  def init(): Unit = {
-    val conf = new SparkConf().setAppName("Spark").setMaster("local");
-    val sc = new SparkContext(conf)
-    val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
-    import spark.implicits._
-  }
+object demo extends institute {  
   def main(args: Array[String]): Unit = {
-    //init()
-    val institute1 = new institute
-    //institute1.temp1()
-    //institute1.temp2()
+    val institute1 = new spark
+    institute1.temp1()
+    institute1.temp2()
     institute1.temp3()
   }
 }
