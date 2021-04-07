@@ -135,8 +135,8 @@ class spark extends institute{
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
 
-    val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/data.csv"
-    val df1 = spark.read.option("header", "true").format("csv").load(path)
+    val pathCsv = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/data.csv"
+    val df1 = spark.read.option("header", "true").format("csv").load(pathCsv)
 
     val dfPersist = df1.toDF().persist(StorageLevel.MEMORY_AND_DISK)
     dfPersist.show(false)
@@ -144,6 +144,33 @@ class spark extends institute{
     df1.createOrReplaceTempView("Orders")
     spark.sql("SELECT * FROM Orders where status='pending'").show()
     spark.sql("SELECT * FROM Orders where total>40").show()
+
+    val pathJson = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/data1.json"
+    val df = spark.read.option("multiline", "true").json(pathJson)
+    df.createOrReplaceTempView("temp")
+
+    df.show(false)
+    val array = spark.sql("SELECT array FROM temp")
+    array.show()
+    //df.select($"string",$"int",$"array",$"dict").show(false)
+
+    /*
+    //val json_file = spark.read.json(pathJson)
+    //val temp = spark.read.schema("schema").json(json_file).filter($"_corrupt_record".isNotNull).count()
+
+    val topHits = json_file.toDF()
+
+    //topHits.printSchema()
+    topHits.show()
+    topHits.createOrReplaceTempView("tophits")
+
+    //spark.sql("SELECT * FROM tophits WHERE US_peak_chart_post>'10'").show()
+    //spark.sql("SELECT * FROM tophits WHERE year<2007").show()
+
+    
+    //spark.read.schema(schema).json(file).select("_corrupt_record").show()
+    */
+
     sc.stop()
     spark.close()
   }
@@ -153,8 +180,8 @@ class spark extends institute{
 object demo extends institute {  
   def main(args: Array[String]): Unit = {
     val institute1 = new spark
-    institute1.temp1()
-    institute1.temp2()
+    //institute1.temp1()
+    //institute1.temp2()
     institute1.temp3()
   }
 }
