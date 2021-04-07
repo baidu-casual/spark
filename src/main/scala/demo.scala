@@ -79,6 +79,7 @@ class spark extends institute{
     df2.show()
 
     sc.stop()
+    spark.close()
   }
   def temp2(): Unit = {
     val conf = new SparkConf().setAppName("Spark2").setMaster("local[2]");
@@ -126,6 +127,7 @@ class spark extends institute{
     sqlDF2.show()
 
     sc.stop()
+    spark.close()
   }
   def temp3(): Unit = {
     val conf = new SparkConf().setAppName("Spark3").setMaster("local[3]");
@@ -134,15 +136,16 @@ class spark extends institute{
     import spark.implicits._
 
     val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/data.csv"
-    val df1 = spark.read.option("header", "true").format("csv").load(path).toDF()
+    val df1 = spark.read.option("header", "true").format("csv").load(path)
 
-    val dfPersist = df1.persist(StorageLevel.MEMORY_ONLY)
+    val dfPersist = df1.toDF().persist(StorageLevel.MEMORY_AND_DISK)
     dfPersist.show(false)
 
     df1.createOrReplaceTempView("Orders")
     spark.sql("SELECT * FROM Orders where status='pending'").show()
     spark.sql("SELECT * FROM Orders where total>40").show()
     sc.stop()
+    spark.close()
   }
 }
 
