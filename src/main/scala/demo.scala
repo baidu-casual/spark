@@ -62,13 +62,6 @@ class institute{
     val departmentsWithEmployeesSeq2 = Seq(departmentWithEmployees3, departmentWithEmployees4)
     val df2 = departmentsWithEmployeesSeq2.toDF()
     display(df2)*/
-    val departmentsWithEmployeesSeq1 = Seq(departmentWithEmployees1, departmentWithEmployees2)
-val df1 = departmentsWithEmployeesSeq1.toDF()
-display(df1)
-
-val departmentsWithEmployeesSeq2 = Seq(departmentWithEmployees3, departmentWithEmployees4)
-val df2 = departmentsWithEmployeesSeq2.toDF()
-display(df2)
   }
 }
 
@@ -76,6 +69,10 @@ object HelloWorld {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("Spark").setMaster("local");
     val sc = new SparkContext(conf)
+
+    val spark = SparkSession.builder().appName("Spark SQL basic example").config("spark.some.config.option", "some-value").getOrCreate()
+    import spark.implicits._
+
 
     val data = Array("Gaurav", "Rohan", "Anuj", "Aryan", "Rahul", "Rohan", "Rohan", "Gaurav", "Karan")
     val distData = sc.parallelize(data)
@@ -87,8 +84,8 @@ object HelloWorld {
 
     println("\n\n\n\n\n")
     println("Word-Count : "+count1.collect.foreach(println))
-    val df = count1.toD("Word","WordCount")
-
+    val df = count1.toDF("Word","WordCount")
+    df.show()
 
     val file = sc.textFile("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/test.txt")
     val words = file.flatMap(_.split(" "))
