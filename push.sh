@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if [[ "$*" == "no" ]]; then
+if [[ "$*" == "pull" ]]; then
     git pull
 else    
     if [[ "$*" == "" ]]; then
