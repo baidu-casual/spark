@@ -171,7 +171,7 @@ class spark extends institute{
     val df = parquetFileDF.toDF().persist(StorageLevel.MEMORY_AND_DISK)
     //df.show()
 
-    df.createOrReplaceTempView("parquetFile")
+    /*df.createOrReplaceTempView("parquetFile")
     spark.sql("SELECT * FROM parquetFile where id<=20").show()
     spark.sql("SELECT * FROM parquetFile where id>20").show()
     spark.sql("SELECT * FROM parquetFile where id>40").show()
@@ -217,7 +217,7 @@ class spark extends institute{
     spark.sql("SELECT * FROM parquetFile where id>940").show()
     spark.sql("SELECT * FROM parquetFile where id>960").show()
     spark.sql("SELECT * FROM parquetFile where id>980").show()
-    spark.sql("SELECT * FROM parquetFile where id>1000").show()
+    spark.sql("SELECT * FROM parquetFile where id>1000").show()*/
     
     /*df.coalesce(1)
       .write("csv")
@@ -228,13 +228,14 @@ class spark extends institute{
       .csv("output/path")*/
     val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output"
 
-    df.repartition(1)
-      .write
+    df.write.save(path)
+
+    df.write
       .format("userdata1.csv")
       .save(path)
 
 
-    df.unpersist()
+    //df.unpersist()
     sc.stop()
     spark.close()
   }
