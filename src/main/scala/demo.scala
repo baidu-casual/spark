@@ -42,7 +42,9 @@ class spark extends institute{
   def temp1(): Unit = {
     val conf = new SparkConf().setAppName("Spark1").setMaster("local");
     val sc = new SparkContext(conf)
+    sc.setLogLevel("OFF")    
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
+    spark.sparkContext.setLogLevel("OFF")
     import spark.implicits._
 
     val department1 = new Department("123456", "Computer Science")
@@ -85,7 +87,9 @@ class spark extends institute{
   def temp2(): Unit = {
     val conf = new SparkConf().setAppName("Spark2").setMaster("local");
     val sc = new SparkContext(conf)
+    sc.setLogLevel("OFF")    
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
+    spark.sparkContext.setLogLevel("OFF")
     import spark.implicits._
 
     val data = Array("Gaurav", "Rohan", "Anuj", "Aryan", "Rahul", "Rohan", "Rohan", "Gaurav", "Karan")
@@ -133,7 +137,13 @@ class spark extends institute{
   def temp3(): Unit = {
     val conf = new SparkConf().setAppName("Spark3").setMaster("local");
     val sc = new SparkContext(conf)
-    val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
+    sc.setLogLevel("OFF")
+    val spark = SparkSession
+                          .builder()
+                          .appName("Spark SQL")
+                          .config(conf)
+                          .getOrCreate()
+    spark.sparkContext.setLogLevel("OFF")
     import spark.implicits._
 
     val pathCsv = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/data.csv"
@@ -160,11 +170,13 @@ class spark extends institute{
   def temp4(): Unit = {
     val conf = new SparkConf().setAppName("Spark4").setMaster("local");
     val sc = new SparkContext(conf)
+    sc.setLogLevel("OFF")
     val spark = SparkSession
     .builder()
     .appName("Spark SQL")
     .config(conf)
     .getOrCreate()
+    spark.sparkContext.setLogLevel("OFF")
     import spark.implicits._
 
     val pathJson = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/parquet/userdata1.parquet"
@@ -232,14 +244,15 @@ class spark extends institute{
   def temp5(): Unit = {
     val conf = new SparkConf().setAppName("Spark5").setMaster("local");
     val sc = new SparkContext(conf)
+    sc.setLogLevel("OFF")
     val spark = SparkSession
     .builder()
     .master("local")
     .appName("Spark SQL")
     .config(conf)
     .getOrCreate()
-    spark.sparkContext.setLogLevel("ERROR")
-    sc.setLogLevel("ERROR")
+    spark.sparkContext.setLogLevel("OFF")
+    
     import spark.implicits._
   }
   def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {
@@ -271,9 +284,9 @@ class spark extends institute{
 object demo extends institute {  
   def main(args: Array[String]): Unit = {
     val institute1 = new spark
-    //institute1.temp1()
-    //institute1.temp2()
-    //institute1.temp3()
+    institute1.temp1()
+    institute1.temp2()
+    institute1.temp3()
     institute1.temp4()
   }
 }
