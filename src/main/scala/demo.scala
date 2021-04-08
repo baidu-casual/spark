@@ -242,13 +242,13 @@ class spark extends institute{
     //val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output/userdata1.csv"
     //df.coalesce(1).write.csv(path)
     
-    /*val socketDF = spark
+    val socketDF = spark
       .readStream
       .format("socket")
       .option("host", "localhost:9092")
       .option("port", 9999)
       .load()
-
+    /*
     socketDF.writeStream
       .format("kafka")
       .option("kafka.bootstrap.servers", "localhost:9092")
@@ -259,7 +259,7 @@ class spark extends institute{
     val df2 = spark.readStream
         .format("kafka")
         .option("kafka.bootstrap.servers", "localhost:9092")
-        .load()*/
+        .load()
 
     val df1 = spark
           .readStream
@@ -268,11 +268,14 @@ class spark extends institute{
           .option("subscribe", "topic1")
           .load()
     df1.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
-          .as[(String, String)]
-
+          .as[(String, String)]*/
+    val csvDF = spark
+          .readStream
+          .option("sep", ";")     // Specify schema of the csv files
+          .csv("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/csv/userdata1.csv")
     
 
-    df.show()
+    csvDF.show()
 
     sc.stop()
     spark.close()

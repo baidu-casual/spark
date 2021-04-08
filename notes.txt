@@ -1,0 +1,6 @@
+
+https://spark.apache.org/docs/2.2.0/structured-streaming-programming-guide.html
+https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html#deploying
+https://spark.apache.org/docs/latest/submitting-applications.html
+https://spark.apache.org/docs/latest/submitting-applications.html
+https://www.confluent.io/blog/kafka-scala-tutorial-for-beginners/
