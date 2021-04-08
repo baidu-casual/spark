@@ -139,7 +139,7 @@ class spark extends institute{
     val df1 = spark.read.option("header", "true").format("csv").load(pathCsv)
 
     val dfPersist = df1.toDF().persist(StorageLevel.MEMORY_AND_DISK)
-    dfPersist.show(false)
+    dfPersist.show()
 
     df1.createOrReplaceTempView("Orders")
     spark.sql("SELECT * FROM Orders where status='pending'").show()
@@ -149,32 +149,119 @@ class spark extends institute{
     val df = spark.read.option("multiline", "true").json(pathJson)
     df.createOrReplaceTempView("temp")
 
-    df.show(false)
+    df.show()
     val array = spark.sql("SELECT array FROM temp")
     array.show()
-    //df.select($"string",$"int",$"array",$"dict").show(false)
-
-    /*
-    //val json_file = spark.read.json(pathJson)
-    //val temp = spark.read.schema("schema").json(json_file).filter($"_corrupt_record".isNotNull).count()
-
-    val topHits = json_file.toDF()
-
-    //topHits.printSchema()
-    topHits.show()
-    topHits.createOrReplaceTempView("tophits")
-
-    //spark.sql("SELECT * FROM tophits WHERE US_peak_chart_post>'10'").show()
-    //spark.sql("SELECT * FROM tophits WHERE year<2007").show()
-
     
-    //spark.read.schema(schema).json(file).select("_corrupt_record").show()
-    */
-
     sc.stop()
     spark.close()
   }
+  def temp4(): Unit = {
+    val conf = new SparkConf().setAppName("Spark4").setMaster("local[3]");
+    val sc = new SparkContext(conf)
+    val spark = SparkSession
+    .builder()
+    .appName("Spark SQL")
+    .config(conf)
+    .getOrCreate()
+    import spark.implicits._
+
+    val pathJson = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/parquet/userdata1.parquet"
+    val parquetFileDF = spark.read.option("multiLines","true").option("inferSchema","true").parquet(pathJson)
+    val df = parquetFileDF.toDF().persist(StorageLevel.MEMORY_AND_DISK)
+    //df.show()
+
+    df.createOrReplaceTempView("parquetFile")
+    spark.sql("SELECT * FROM parquetFile where id<=20").show()
+    spark.sql("SELECT * FROM parquetFile where id>20").show()
+    spark.sql("SELECT * FROM parquetFile where id>40").show()
+    spark.sql("SELECT * FROM parquetFile where id>60").show()
+    spark.sql("SELECT * FROM parquetFile where id>80").show()
+    spark.sql("SELECT * FROM parquetFile where id>100").show()
+    spark.sql("SELECT * FROM parquetFile where id>120").show()
+    spark.sql("SELECT * FROM parquetFile where id>140").show()
+    spark.sql("SELECT * FROM parquetFile where id>160").show()
+    spark.sql("SELECT * FROM parquetFile where id>180").show()
+    spark.sql("SELECT * FROM parquetFile where id>200").show()
+    spark.sql("SELECT * FROM parquetFile where id>220").show()
+    spark.sql("SELECT * FROM parquetFile where id>240").show()
+    spark.sql("SELECT * FROM parquetFile where id>260").show()
+    spark.sql("SELECT * FROM parquetFile where id>280").show()
+    spark.sql("SELECT * FROM parquetFile where id>300").show()
+    spark.sql("SELECT * FROM parquetFile where id>320").show()
+    spark.sql("SELECT * FROM parquetFile where id>340").show()
+    spark.sql("SELECT * FROM parquetFile where id>360").show()
+    spark.sql("SELECT * FROM parquetFile where id>380").show()
+    spark.sql("SELECT * FROM parquetFile where id>400").show()
+    spark.sql("SELECT * FROM parquetFile where id>420").show()
+    spark.sql("SELECT * FROM parquetFile where id>440").show()
+    spark.sql("SELECT * FROM parquetFile where id>460").show()
+    spark.sql("SELECT * FROM parquetFile where id>480").show()
+    spark.sql("SELECT * FROM parquetFile where id>500").show()
+    spark.sql("SELECT * FROM parquetFile where id>520").show()
+    spark.sql("SELECT * FROM parquetFile where id>540").show()
+    spark.sql("SELECT * FROM parquetFile where id>560").show()
+    spark.sql("SELECT * FROM parquetFile where id>580").show()
+    spark.sql("SELECT * FROM parquetFile where id>600").show()
+    spark.sql("SELECT * FROM parquetFile where id>620").show()
+    spark.sql("SELECT * FROM parquetFile where id>640").show()
+    spark.sql("SELECT * FROM parquetFile where id>660").show()
+    spark.sql("SELECT * FROM parquetFile where id>680").show()
+    spark.sql("SELECT * FROM parquetFile where id>700").show()
+    spark.sql("SELECT * FROM parquetFile where id>720").show()
+    spark.sql("SELECT * FROM parquetFile where id>740").show()
+    spark.sql("SELECT * FROM parquetFile where id>760").show()
+    spark.sql("SELECT * FROM parquetFile where id>780").show()
+    spark.sql("SELECT * FROM parquetFile where id>800").show()
+    spark.sql("SELECT * FROM parquetFile where id>920").show()
+    spark.sql("SELECT * FROM parquetFile where id>940").show()
+    spark.sql("SELECT * FROM parquetFile where id>960").show()
+    spark.sql("SELECT * FROM parquetFile where id>980").show()
+    spark.sql("SELECT * FROM parquetFile where id>1000").show()
+    
+    /*df.coalesce(1)
+      .write("csv")
+      .save("<my-path>")
+      .option("header","true")
+      .option("sep",",")
+      .mode("overwrite")
+      .csv("output/path")*/
+    val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output"
+
+    df.repartition(1)
+      .write
+      .format("userdata1.csv")
+      .save(path)
+
+
+    df.unpersist()
+    sc.stop()
+    spark.close()
+  }
+  def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {
+    
+    val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output"
+
+    df.repartition(1)
+      .write
+      .format(name)
+      .save(path)
+    /*df.repartition(1).write.
+        format("com.databricks.spark.csv").
+        option("header", header.toString).
+        option("delimiter", sep).
+        save("Path")
+
+    val dir = new File(tmpParquetDir)
+    val newFileRgex = tmpParquetDir + File.separatorChar + ".part-00000.*.csv"
+    val tmpTsfFile = dir.listFiles.filter(_.toPath.toString.matches(newFileRgex))(0).toString
+    (new File(tmpTsvFile)).renameTo(new File(tsvOutput))
+
+    dir.listFiles.foreach( f => f.delete )
+    dir.delete*/
+  }
 }
+
 
 //
 object demo extends institute {  
@@ -182,6 +269,7 @@ object demo extends institute {
     val institute1 = new spark
     //institute1.temp1()
     //institute1.temp2()
-    institute1.temp3()
+    //institute1.temp3()
+    institute1.temp4()
   }
 }
