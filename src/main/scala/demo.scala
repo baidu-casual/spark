@@ -1,4 +1,4 @@
-package demo
+package main
 
 
 import org.apache.spark.{SparkContext,SparkConf}
@@ -8,6 +8,8 @@ import org.apache.spark.sql._
 import org.apache.spark.sql.types._
 import org.apache.spark.SparkContext._
 import org.apache.spark.storage.StorageLevel
+import org.apache.spark._
+import org.apache.spark.streaming._
 
 import org.apache.hadoop.io.LongWritable
 import org.apache.hadoop.io.Text
@@ -251,15 +253,20 @@ class spark extends institute{
     .appName("Spark SQL")
     .config(conf)
     .getOrCreate()    
-    spark.sparkContext.setLogLevel("OFF")    
+    spark.sparkContext.setLogLevel("OFF")  
+    val ssc = new StreamingContext(sc, Seconds(1))  
     import spark.implicits._
 
-    val initDF = (spark
+    ssc.textFileStream("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/in.txt")
+    val lines = ssc.socketTextStream("localhost", 9999)
+
+
+    /*val initDF = (spark
                       .readStream
                       .format("rate")
                       .option("rowsPerSecond", 1)
                       .load())
-    println("Streaming DataFrame : " + initDF.isStreaming)
+    println("Streaming DataFrame : " + initDF.isStreaming)*/
     
 
   }

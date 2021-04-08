@@ -21,6 +21,7 @@
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-sql_2.12/3.1.1/spark-sql_2.12-3.1.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-streaming_2.12/3.1.1/spark-streaming_2.12-3.1.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/kafka/kafka_2.12/2.7.0/kafka_2.12-2.7.0.jar",
+            "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-10-assembly_2.12/3.1.1/spark-streaming-kafka-0-10-assembly_2.12-3.1.1.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/io/github/openconnectors/connector-kafka010/0.0.3/connector-kafka010-0.0.3.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar",
             "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/avro/avro/1.8.2/avro-1.8.2.jar",
@@ -377,6 +378,23 @@
                             "name": "kafka_2.12",
                             "classifier": "sources",
                             "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/kafka/kafka_2.12/2.7.0/kafka_2.12-2.7.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.spark",
+                    "name": "spark-streaming-kafka-0-10-assembly_2.12",
+                    "version": "3.1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spark-streaming-kafka-0-10-assembly_2.12",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-10-assembly_2.12/3.1.1/spark-streaming-kafka-0-10-assembly_2.12-3.1.1.jar"
+                        },
+                        {
+                            "name": "spark-streaming-kafka-0-10-assembly_2.12",
+                            "classifier": "sources",
+                            "path": "/home/xs107-bairoy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-10-assembly_2.12/3.1.1/spark-streaming-kafka-0-10-assembly_2.12-3.1.1-sources.jar"
                         }
                     ]
                 },
