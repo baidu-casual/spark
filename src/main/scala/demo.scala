@@ -180,7 +180,7 @@ class spark extends institute{
     .config(conf)
     .getOrCreate()
     spark.sparkContext.setLogLevel("OFF")
-    val ssc = new StreamingContext(sc, Seconds(1))
+    //val ssc = new StreamingContext(sc, Seconds(1))
     import spark.implicits._
 
     val pathJson = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/parquet/userdata1.parquet"
@@ -242,7 +242,7 @@ class spark extends institute{
     //val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output/userdata1.csv"
     //df.coalesce(1).write.csv(path)
     
-    val socketDF = spark
+    /*val socketDF = spark
       .readStream
       .format("socket")
       .option("host", "localhost:9092")
@@ -259,7 +259,18 @@ class spark extends institute{
     val df2 = spark.readStream
         .format("kafka")
         .option("kafka.bootstrap.servers", "localhost:9092")
-        .load()
+        .load()*/
+
+    val df1 = spark
+          .readStream
+          .format("kafka")
+          .option("kafka.bootstrap.servers", "localhost:9092")
+          .option("subscribe", "topic1")
+          .load()
+    df1.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
+          .as[(String, String)]
+
+    
 
     df.show()
 
@@ -277,11 +288,11 @@ class spark extends institute{
     .config(conf)
     .getOrCreate()    
     spark.sparkContext.setLogLevel("OFF")  
-    val ssc = new StreamingContext(sc, Seconds(1))  
+    //val ssc = new StreamingContext(sc, Seconds(1))  
     import spark.implicits._
 
-    val streamingDataFrame = ssc.textFileStream("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/in.txt")
-    val lines = ssc.socketTextStream("localhost", 9999)
+    //val streamingDataFrame = ssc.textFileStream("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/in.txt")
+    //val lines = ssc.socketTextStream("localhost", 9999)
 
     
     /*val initDF = (spark
