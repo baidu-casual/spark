@@ -187,7 +187,7 @@ class spark extends institute{
     val parquetFileDF = spark.read.option("multiLines","true").option("inferSchema","true").parquet(pathJson)
     val df = parquetFileDF.toDF().persist(StorageLevel.MEMORY_AND_DISK)
     //df.show()
-    /*
+    
     df.createOrReplaceTempView("parquetFile")
     spark.sql("SELECT * FROM parquetFile where id<=20").show()
     spark.sql("SELECT * FROM parquetFile where id>20").show()
@@ -234,20 +234,27 @@ class spark extends institute{
     spark.sql("SELECT * FROM parquetFile where id>940").show()
     spark.sql("SELECT * FROM parquetFile where id>960").show()
     spark.sql("SELECT * FROM parquetFile where id>980").show()
-    spark.sql("SELECT * FROM parquetFile where id>1000").show()*/
+    spark.sql("SELECT * FROM parquetFile where id>1000").show()
 
     /**
       * Un-Comment the lines below to save parquet to csv files
       */   
     //val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output/userdata1.csv"
     //df.coalesce(1).write.csv(path)
+    
+    val socketDF = spark
+      .readStream
+      .format("socket")
+      .option("host", "localhost:9092")
+      .option("port", 9999)
+      .load()
 
-    /*df.writeStream
+    socketDF.writeStream
       .format("kafka")
       .option("kafka.bootstrap.servers", "localhost:9092")
       .outputMode("append")
       .start()
-      .awaitTermination()*/
+      .awaitTermination()
 
     val df2 = spark.readStream
         .format("kafka")
