@@ -250,10 +250,18 @@ class spark extends institute{
     .master("local")
     .appName("Spark SQL")
     .config(conf)
-    .getOrCreate()
-    spark.sparkContext.setLogLevel("OFF")
-    
+    .getOrCreate()    
+    spark.sparkContext.setLogLevel("OFF")    
     import spark.implicits._
+
+    val initDF = (spark
+                      .readStream
+                      .format("rate")
+                      .option("rowsPerSecond", 1)
+                      .load())
+    println("Streaming DataFrame : " + initDF.isStreaming)
+    
+
   }
   def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {
     
