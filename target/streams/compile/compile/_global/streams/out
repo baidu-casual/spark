@@ -1,4 +1,22 @@
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:89:3: ')' expected but '}' found.[0m
-[0m[[0m[31merror[0m] [0m[0m  }[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:3:35: object kafka010 is not a member of package org.apache.spark.streaming[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.streaming.kafka010._[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:4:35: object kafka010 is not a member of package org.apache.spark.streaming[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:5:35: object kafka010 is not a member of package org.apache.spark.streaming[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:21:14: not found: value KafkaUtils[0m
+[0m[[0m[31merror[0m] [0m[0mval stream = KafkaUtils.createDirectStream[String, String]([0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:22:3: not found: value streamingContext[0m
+[0m[[0m[31merror[0m] [0m[0m  streamingContext,[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:23:3: not found: value PreferConsistent[0m
+[0m[[0m[31merror[0m] [0m[0m  PreferConsistent,[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:24:3: not found: value Subscribe[0m
+[0m[[0m[31merror[0m] [0m[0m  Subscribe[String, String](topics, kafkaParams)[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m7 errors found[0m
