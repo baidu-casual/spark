@@ -40,7 +40,7 @@ class spark extends institute{
   }
 
   def temp1(): Unit = {
-    val conf = new SparkConf().setAppName("Spark1").setMaster("local[1]");
+    val conf = new SparkConf().setAppName("Spark1").setMaster("local");
     val sc = new SparkContext(conf)
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
@@ -83,7 +83,7 @@ class spark extends institute{
     spark.close()
   }
   def temp2(): Unit = {
-    val conf = new SparkConf().setAppName("Spark2").setMaster("local[2]");
+    val conf = new SparkConf().setAppName("Spark2").setMaster("local");
     val sc = new SparkContext(conf)
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
@@ -131,7 +131,7 @@ class spark extends institute{
     spark.close()
   }
   def temp3(): Unit = {
-    val conf = new SparkConf().setAppName("Spark3").setMaster("local[3]");
+    val conf = new SparkConf().setAppName("Spark3").setMaster("local");
     val sc = new SparkContext(conf)
     val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()
     import spark.implicits._
@@ -158,7 +158,7 @@ class spark extends institute{
     spark.close()
   }
   def temp4(): Unit = {
-    val conf = new SparkConf().setAppName("Spark4").setMaster("local[3]");
+    val conf = new SparkConf().setAppName("Spark4").setMaster("local");
     val sc = new SparkContext(conf)
     val spark = SparkSession
     .builder()
@@ -228,6 +228,19 @@ class spark extends institute{
 
     sc.stop()
     spark.close()
+  }
+  def temp5(): Unit = {
+    val conf = new SparkConf().setAppName("Spark5").setMaster("local");
+    val sc = new SparkContext(conf)
+    val spark = SparkSession
+    .builder()
+    .master("local")
+    .appName("Spark SQL")
+    .config(conf)
+    .getOrCreate()
+    spark.sparkContext.setLogLevel("ERROR")
+    sc.setLogLevel("ERROR")
+    import spark.implicits._
   }
   def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {
     
