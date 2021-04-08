@@ -13,6 +13,7 @@ import org.apache.hadoop.io.LongWritable
 import org.apache.hadoop.io.Text
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat
+import org.apache.spark.rdd.RDD
 
 class institute
 case class Department(id: String, name: String) extends institute
@@ -171,7 +172,7 @@ class spark extends institute{
     val df = parquetFileDF.toDF().persist(StorageLevel.MEMORY_AND_DISK)
     //df.show()
 
-    /*df.createOrReplaceTempView("parquetFile")
+    df.createOrReplaceTempView("parquetFile")
     spark.sql("SELECT * FROM parquetFile where id<=20").show()
     spark.sql("SELECT * FROM parquetFile where id>20").show()
     spark.sql("SELECT * FROM parquetFile where id>40").show()
@@ -217,25 +218,14 @@ class spark extends institute{
     spark.sql("SELECT * FROM parquetFile where id>940").show()
     spark.sql("SELECT * FROM parquetFile where id>960").show()
     spark.sql("SELECT * FROM parquetFile where id>980").show()
-    spark.sql("SELECT * FROM parquetFile where id>1000").show()*/
-    
-    /*df.coalesce(1)
-      .write("csv")
-      .save("<my-path>")
-      .option("header","true")
-      .option("sep",",")
-      .mode("overwrite")
-      .csv("output/path")*/
-    val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output"
+    spark.sql("SELECT * FROM parquetFile where id>1000").show()
 
-    df.write.save(path)
+    /**
+      * Un-Comment the lines below to save parquet to csv files
+      */   
+    //val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output/userdata1.csv"
+    //df.coalesce(1).write.csv(path)
 
-    df.write
-      .format("userdata1.csv")
-      .save(path)
-
-
-    //df.unpersist()
     sc.stop()
     spark.close()
   }
