@@ -21,6 +21,7 @@ class institute
 case class Department(id: String, name: String) extends institute
 case class Employee(firstName: String, lastName: String, email: String, salary: Int) extends institute
 case class DepartmentWithEmployees(department: Department, employees: Seq[Employee]) extends institute
+case class KafkaProducer(first: String,last: String) extends institute
 
 class spark extends institute{
 
@@ -179,13 +180,14 @@ class spark extends institute{
     .config(conf)
     .getOrCreate()
     spark.sparkContext.setLogLevel("OFF")
+    val ssc = new StreamingContext(sc, Seconds(1))
     import spark.implicits._
 
     val pathJson = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/parquet/userdata1.parquet"
     val parquetFileDF = spark.read.option("multiLines","true").option("inferSchema","true").parquet(pathJson)
     val df = parquetFileDF.toDF().persist(StorageLevel.MEMORY_AND_DISK)
     //df.show()
-
+    /*
     df.createOrReplaceTempView("parquetFile")
     spark.sql("SELECT * FROM parquetFile where id<=20").show()
     spark.sql("SELECT * FROM parquetFile where id>20").show()
@@ -232,13 +234,27 @@ class spark extends institute{
     spark.sql("SELECT * FROM parquetFile where id>940").show()
     spark.sql("SELECT * FROM parquetFile where id>960").show()
     spark.sql("SELECT * FROM parquetFile where id>980").show()
-    spark.sql("SELECT * FROM parquetFile where id>1000").show()
+    spark.sql("SELECT * FROM parquetFile where id>1000").show()*/
 
     /**
       * Un-Comment the lines below to save parquet to csv files
       */   
     //val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output/userdata1.csv"
     //df.coalesce(1).write.csv(path)
+
+    /*df.writeStream
+      .format("kafka")
+      .option("kafka.bootstrap.servers", "localhost:9092")
+      .outputMode("append")
+      .start()
+      .awaitTermination()*/
+
+    val df2 = spark.readStream
+        .format("kafka")
+        .option("kafka.bootstrap.servers", "localhost:9092")
+        .load()
+
+    df.show()
 
     sc.stop()
     spark.close()
@@ -257,10 +273,10 @@ class spark extends institute{
     val ssc = new StreamingContext(sc, Seconds(1))  
     import spark.implicits._
 
-    ssc.textFileStream("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/in.txt")
+    val streamingDataFrame = ssc.textFileStream("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/in.txt")
     val lines = ssc.socketTextStream("localhost", 9999)
 
-
+    
     /*val initDF = (spark
                       .readStream
                       .format("rate")
@@ -268,6 +284,38 @@ class spark extends institute{
                       .load())
     println("Streaming DataFrame : " + initDF.isStreaming)*/
     
+
+  }
+  def temp6(): Unit = {
+    /*var kafkaItemProducer: KafkaProducer[String, String] = null
+
+    val KAFKA_ITEM_CLIENT_ID = "a"
+    val KAFKA_TOPIC_ITEM = "b"
+    val KAFKA_SERVER = "host:port"
+
+    val kafkaItemProducerConfig = {
+      val p = new Properties()
+      p.put("bootstrap.servers", KAFKA_SERVER)
+      p.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+      p.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+      p.put("acks", "all")
+      p
+    }
+    val conf: SparkConf = new SparkConf().setAppName("esc")
+    val sc: SparkContext = new SparkContext(conf)
+
+
+
+    val dataToDmp = sc.textFile("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/in.txt",5)
+    dataToDmp.foreachPartition(partition =>{
+      val kafkaItemProducer = new KafkaProducer[String, String](kafkaItemProducerConfig)
+      partition.foreach(
+        x=>{ kafkaItemProducer.send(new ProducerRecord[String, String](KAFKA_TOPIC_ITEM, x.toString))
+          Thread.sleep(100)
+        }
+      )
+      kafkaItemProducer.close()
+    })*/
 
   }
   def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {
@@ -299,9 +347,11 @@ class spark extends institute{
 object demo extends institute {  
   def main(args: Array[String]): Unit = {
     val institute1 = new spark
-    institute1.temp1()
-    institute1.temp2()
-    institute1.temp3()
+    //institute1.temp1()
+    //institute1.temp2()
+    //institute1.temp3()
     institute1.temp4()
+    //institute1.temp5()
+    //institute1.temp6()
   }
 }
