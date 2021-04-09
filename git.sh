@@ -6,7 +6,7 @@ if [[ "$*" == "" ]]; then
 else
     mess="$*"
 fi
-git pull
+#git pull
 git add .
 echo "Message: $mess"
 git commit -m "$mess"
