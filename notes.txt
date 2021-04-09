@@ -6,3 +6,4 @@ https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html
 https://spark.apache.org/docs/latest/submitting-applications.html
 https://spark.apache.org/docs/latest/submitting-applications.html
 https://www.confluent.io/blog/kafka-scala-tutorial-for-beginners/
+https://github.com/indiacloudtv/structuredstreamingkafkascala.git
