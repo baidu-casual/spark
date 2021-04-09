@@ -10,6 +10,7 @@ import org.apache.spark.SparkContext._
 import org.apache.spark.storage.StorageLevel
 import org.apache.spark._
 import org.apache.spark.streaming._
+import org.apache.spark.sql.streaming.Trigger
 
 import org.apache.hadoop.io.LongWritable
 import org.apache.hadoop.io.Text
@@ -247,7 +248,7 @@ class spark extends institute{
       .format("socket")
       .option("host", "localhost:9092")
       .option("port", 9999)
-      .load()
+      .load("/home/baidu/xenonstack/l2/module4/spark/files/temp.txt")
     /*
     socketDF.writeStream
       .format("kafka")
@@ -281,31 +282,87 @@ class spark extends institute{
     spark.close()
   }
   def temp5(): Unit = {
-    val conf = new SparkConf().setAppName("Spark5").setMaster("local");
-    val sc = new SparkContext(conf)
-    sc.setLogLevel("OFF")
-    val spark = SparkSession
-    .builder()
-    .master("local")
-    .appName("Spark SQL")
-    .config(conf)
-    .getOrCreate()    
-    spark.sparkContext.setLogLevel("OFF")  
-    //val ssc = new StreamingContext(sc, Seconds(1))  
-    import spark.implicits._
+    println("Spark Structured Streaming with Kafka Demo Application Started ...")
 
-    //val streamingDataFrame = ssc.textFileStream("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/in.txt")
-    //val lines = ssc.socketTextStream("localhost", 9999)
+    val KAFKA_TOPIC_NAME_CONS = "testtopic"
+    val KAFKA_OUTPUT_TOPIC_NAME_CONS = "outputtopic"
+    val KAFKA_BOOTSTRAP_SERVERS_CONS = "34.73.102.250:9092"
 
-    
-    /*val initDF = (spark
-                      .readStream
-                      .format("rate")
-                      .option("rowsPerSecond", 1)
-                      .load())
-    println("Streaming DataFrame : " + initDF.isStreaming)*/
-    
+    System.setProperty("HADOOP_USER_NAME","hadoop")
 
+    val spark = SparkSession.builder
+        .master("local[*]")
+        .appName("Spark Structured Streaming with Kafka Demo")
+        .getOrCreate()
+
+    spark.sparkContext.setLogLevel("ERROR")
+
+    // Stream from Kafka
+    val transaction_detail_df = spark.readStream
+      .format("kafka")
+      .option("kafka.bootstrap.servers", KAFKA_BOOTSTRAP_SERVERS_CONS)
+      .option("subscribe", KAFKA_TOPIC_NAME_CONS)
+      .option("startingOffsets", "latest")
+      .load()
+
+    println("Printing Schema of transaction_detail_df: ")
+    transaction_detail_df.printSchema()
+
+    val transaction_detail_df1 = transaction_detail_df.selectExpr("CAST(value AS STRING)", "CAST(timestamp AS TIMESTAMP)")
+
+    // Define a schema for the transaction_detail data
+    val transaction_detail_schema = StructType(Array(
+      StructField("transaction_id", StringType),
+      StructField("transaction_card_type", StringType),
+      StructField("transaction_amount", StringType),
+      StructField("transaction_datetime", StringType)
+    ))
+
+    val transaction_detail_df2 = transaction_detail_df1
+      .select(from_json(col("value"), transaction_detail_schema)
+        .as("transaction_detail"), col("timestamp"))
+
+    val transaction_detail_df3 = transaction_detail_df2.select("transaction_detail.*", "timestamp")
+
+    // Simple aggregate - find total_transaction_amount by grouping transaction_card_type
+    val transaction_detail_df4 = transaction_detail_df3.groupBy("transaction_card_type")
+    .agg(sum(col("transaction_amount")).as("total_transaction_amount"))
+
+    println("Printing Schema of transaction_detail_df4: ")
+    transaction_detail_df4.printSchema()
+
+    val transaction_detail_df5 = transaction_detail_df4.withColumn("key", lit(100))
+      .withColumn("value", concat(lit("{'transaction_card_type': '"),
+        col("transaction_card_type"), lit("', 'total_transaction_amount: '"),
+        col("total_transaction_amount").cast("string"), lit("'}")))
+
+    println("Printing Schema of transaction_detail_df5: ")
+    transaction_detail_df5.printSchema()
+
+    // Write final result into console for debugging purpose
+    val trans_detail_write_stream = transaction_detail_df5
+      .writeStream
+      .trigger(Trigger.ProcessingTime("1 seconds"))
+      .outputMode("update")
+      .option("truncate","false")
+      .format("console")
+      .start()
+
+    // Write final result in the Kafka topic as key, value
+    val trans_detail_write_stream_1 = transaction_detail_df5
+      .selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
+      .writeStream
+      .format("kafka")
+      .option("kafka.bootstrap.servers", KAFKA_BOOTSTRAP_SERVERS_CONS)
+      .option("topic", KAFKA_OUTPUT_TOPIC_NAME_CONS)
+      .trigger(Trigger.ProcessingTime("1 seconds"))
+      .outputMode("update")
+      .option("checkpointLocation", "file:///D://work//development//spark_structured_streaming_kafka//checkpoint")
+      .start()
+
+    trans_detail_write_stream.awaitTermination()
+
+    println("Spark Structured Streaming with Kafka Demo Application Completed.")
   }
   def temp6(): Unit = {
     /*var kafkaItemProducer: KafkaProducer[String, String] = null
@@ -371,8 +428,8 @@ object demo extends institute {
     //institute1.temp1()
     //institute1.temp2()
     //institute1.temp3()
-    institute1.temp4()
-    //institute1.temp5()
+    //institute1.temp4()
+    institute1.temp5()
     //institute1.temp6()
   }
 }
