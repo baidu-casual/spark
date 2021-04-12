@@ -4,6 +4,7 @@ package main
 import org.apache.spark.{SparkContext,SparkConf}
 import org.apache.spark.sql.{Dataset, DataFrame, SparkSession}
 import org.apache.spark.sql.functions._
+import org.apache.spark.sql.functions.broadcast
 import org.apache.spark.sql._
 import org.apache.spark.sql.types._
 import org.apache.spark.SparkContext._
@@ -181,7 +182,6 @@ class spark extends institute{
     .config(conf)
     .getOrCreate()
     spark.sparkContext.setLogLevel("OFF")
-    //val ssc = new StreamingContext(sc, Seconds(1))
     import spark.implicits._
 
     val pathJson = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/parquet/userdata1.parquet"
@@ -364,37 +364,55 @@ class spark extends institute{
 
     println("Spark Structured Streaming with Kafka Demo Application Completed.")
   }
-  def temp6(): Unit = {
-    /*var kafkaItemProducer: KafkaProducer[String, String] = null
-
-    val KAFKA_ITEM_CLIENT_ID = "a"
-    val KAFKA_TOPIC_ITEM = "b"
-    val KAFKA_SERVER = "host:port"
-
-    val kafkaItemProducerConfig = {
-      val p = new Properties()
-      p.put("bootstrap.servers", KAFKA_SERVER)
-      p.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-      p.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-      p.put("acks", "all")
-      p
-    }
-    val conf: SparkConf = new SparkConf().setAppName("esc")
-    val sc: SparkContext = new SparkContext(conf)
+  def broadcastJoins(): Unit = {
+    val conf = new SparkConf().setAppName("Spark4").setMaster("local");
+    val sc = new SparkContext(conf)
+    sc.setLogLevel("OFF")
+    val spark = SparkSession
+    .builder()
+    .appName("Spark SQL")
+    .config(conf)
+    .getOrCreate()
+    spark.sparkContext.setLogLevel("OFF")
+    //val ssc = new StreamingContext(sc, Seconds(1))
+    import spark.implicits._
 
 
+    
+    val peopleDF = Seq(
+                  ("andrea", "medellin"),
+                  ("rodolfo", "medellin"),
+                  ("abdul", "bangalore")).toDF("first_name", "city")
+    peopleDF.show()
+    val citiesDF = Seq(
+                  ("medellin", "colombia", 2.5),
+                  ("bangalore", "india", 12.3)).toDF("city", "country", "population")
+    citiesDF.show()
 
-    val dataToDmp = sc.textFile("/home/xs107-bairoy/xenonstack/l2/module4/spark/files/in.txt",5)
-    dataToDmp.foreachPartition(partition =>{
-      val kafkaItemProducer = new KafkaProducer[String, String](kafkaItemProducerConfig)
-      partition.foreach(
-        x=>{ kafkaItemProducer.send(new ProducerRecord[String, String](KAFKA_TOPIC_ITEM, x.toString))
-          Thread.sleep(100)
-        }
-      )
-      kafkaItemProducer.close()
-    })*/
+    peopleDF.join(broadcast(citiesDF),
+                  peopleDF("city") <=> citiesDF("city")).show()
 
+    
+    val trainsCsv = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/trains/trains.csv"
+    val trains = spark.read.option("header", "true").format("csv").load(trainsCsv).toDF()
+
+    val carsCsv = "/home/xs107-bairoy/xenonstack/l2/module4/spark/files/trains/cars.csv"
+    val cars = spark.read.option("header", "true").format("csv").load(carsCsv).toDF()
+
+    trains.show()
+    cars.show()
+
+    trains.createOrReplaceTempView("trains")
+    cars.createOrReplaceTempView("cars")
+
+    val trainsDF=spark.sql("SELECT * from trains")
+    val carsDF=spark.sql("SELECT * from cars")
+    carsDF.join(broadcast(trainsDF),
+                  carsDF("id") <=> trainsDF("id")).show()
+
+
+    sc.stop()
+    spark.close()
   }
   def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {
     
@@ -429,7 +447,10 @@ object demo extends institute {
     //institute1.temp2()
     //institute1.temp3()
     //institute1.temp4()
-    institute1.temp5()
-    //institute1.temp6()
+    //institute1.temp5()
+    institute1.broadcastJoins()
   }
 }
+/**
+*Dear Sir, I'm 
+*/

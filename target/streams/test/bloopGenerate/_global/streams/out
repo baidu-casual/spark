@@ -1,4 +1,4 @@
 [debug] [spark-test] Classpath dependencies List()
 [debug] [spark-test] Dependencies from configurations List(spark)
-[debug] Bloop wrote the configuration of project 'spark-test' to '/home/baidu/xenonstack/l2/module4/spark/.bloop/spark-test.json'
+[debug] Bloop wrote the configuration of project 'spark-test' to '/home/xs107-bairoy/xenonstack/l2/module4/spark/.bloop/spark-test.json'
 [success] Generated .bloop/spark-test.json

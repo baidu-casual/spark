@@ -1,133 +1,15 @@
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:4:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.{SparkContext,SparkConf}[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:405:12: value join is not a member of Unit[0m
+[0m[[0m[31merror[0m] [0m[0m    female.join(broadcast(male),[0m
 [0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:5:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql.{Dataset, DataFrame, SparkSession}[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:6:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql.functions._[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:7:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql._[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:8:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql.types._[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:9:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.SparkContext._[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:10:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.storage.StorageLevel[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:11:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark._[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:12:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.streaming._[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:13:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.streaming.StreamingContext[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:15:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.hadoop.io.LongWritable[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:16:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.hadoop.io.Text[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:17:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.hadoop.conf.Configuration[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:18:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.hadoop.mapreduce.lib.input.TextInputFormat[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:19:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.rdd.RDD[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:47:20: not found: type SparkConf[0m
-[0m[[0m[31merror[0m] [0m[0m    val conf = new SparkConf().setAppName("Spark1").setMaster("local");[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:48:18: not found: type SparkContext[0m
-[0m[[0m[31merror[0m] [0m[0m    val sc = new SparkContext(conf)[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:50:17: not found: value SparkSession[0m
-[0m[[0m[31merror[0m] [0m[0m    val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:59:35: value toDF is not a member of Seq[main.Department][0m
-[0m[[0m[31merror[0m] [0m[0m    val dfDepartment = department.toDF()[0m
-[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:68:31: value toDF is not a member of Seq[main.Employee][0m
-[0m[[0m[31merror[0m] [0m[0m    val dfEmployee = employee.toDF()[0m
-[0m[[0m[31merror[0m] [0m[0m                              ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:81:44: value toDF is not a member of Seq[main.DepartmentWithEmployees][0m
-[0m[[0m[31merror[0m] [0m[0m    val df1 = departmentsWithEmployeesSeq1.toDF()[0m
-[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:85:44: value toDF is not a member of Seq[main.DepartmentWithEmployees][0m
-[0m[[0m[31merror[0m] [0m[0m    val df2 = departmentsWithEmployeesSeq2.toDF()[0m
-[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:92:20: not found: type SparkConf[0m
-[0m[[0m[31merror[0m] [0m[0m    val conf = new SparkConf().setAppName("Spark2").setMaster("local");[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:93:18: not found: type SparkContext[0m
-[0m[[0m[31merror[0m] [0m[0m    val sc = new SparkContext(conf)[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:95:17: not found: value SparkSession[0m
-[0m[[0m[31merror[0m] [0m[0m    val spark = SparkSession.builder().appName("Spark SQL").config(conf).getOrCreate()[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:142:20: not found: type SparkConf[0m
-[0m[[0m[31merror[0m] [0m[0m    val conf = new SparkConf().setAppName("Spark3").setMaster("local");[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:143:18: not found: type SparkContext[0m
-[0m[[0m[31merror[0m] [0m[0m    val sc = new SparkContext(conf)[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:145:17: not found: value SparkSession[0m
-[0m[[0m[31merror[0m] [0m[0m    val spark = SparkSession[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:175:20: not found: type SparkConf[0m
-[0m[[0m[31merror[0m] [0m[0m    val conf = new SparkConf().setAppName("Spark4").setMaster("local");[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:176:18: not found: type SparkContext[0m
-[0m[[0m[31merror[0m] [0m[0m    val sc = new SparkContext(conf)[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:178:17: not found: value SparkSession[0m
-[0m[[0m[31merror[0m] [0m[0m    val spark = SparkSession[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:184:19: not found: type StreamingContext[0m
-[0m[[0m[31merror[0m] [0m[0m    val ssc = new StreamingContext(sc, Seconds(1))[0m
-[0m[[0m[31merror[0m] [0m[0m                  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:184:40: not found: value Seconds[0m
-[0m[[0m[31merror[0m] [0m[0m    val ssc = new StreamingContext(sc, Seconds(1))[0m
-[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:271:20: not found: type SparkConf[0m
-[0m[[0m[31merror[0m] [0m[0m    val conf = new SparkConf().setAppName("Spark5").setMaster("local");[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:272:18: not found: type SparkContext[0m
-[0m[[0m[31merror[0m] [0m[0m    val sc = new SparkContext(conf)[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:274:17: not found: value SparkSession[0m
-[0m[[0m[31merror[0m] [0m[0m    val spark = SparkSession[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:281:19: not found: type StreamingContext[0m
-[0m[[0m[31merror[0m] [0m[0m    val ssc = new StreamingContext(sc, Seconds(1))  [0m
-[0m[[0m[31merror[0m] [0m[0m                  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:281:40: not found: value Seconds[0m
-[0m[[0m[31merror[0m] [0m[0m    val ssc = new StreamingContext(sc, Seconds(1))  [0m
-[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:329:23: not found: type DataFrame[0m
-[0m[[0m[31merror[0m] [0m[0m  def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:3:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.clients.consumer.ConsumerRecord[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:4:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.common.serialization.StringDeserializer[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:5:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.streaming.kafka010._[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:6:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo1.scala:7:12: object apache is not a member of package org[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m44 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:405:27: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: org.apache.spark.sql.Dataset[?][0m
+[0m[[0m[31merror[0m] [0m[0m    female.join(broadcast(male),[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:406:25: Unit does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m                  female("country") <=> male("country")).show()[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:406:45: Unit does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m                  female("country") <=> male("country")).show()[0m
+[0m[[0m[31merror[0m] [0m[0m                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
