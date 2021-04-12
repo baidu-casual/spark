@@ -19,6 +19,12 @@ import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat
 import org.apache.spark.rdd.RDD
 
+import scala.util.Random
+import play.api.libs.json._
+import play.api.libs.json.{JsNull,Json,JsString,JsValue}
+import scala.util.parsing.json.JSONObject
+
+
 class institute
 case class Department(id: String, name: String) extends institute
 case class Employee(firstName: String, lastName: String, email: String, salary: Int) extends institute
@@ -414,6 +420,20 @@ class spark extends institute{
     sc.stop()
     spark.close()
   }
+  def temp6(): Unit = {
+    for ( a <- 3 to 100){
+    val temp = Map(
+      "id" -> Random.nextInt(500),
+      "name" -> Random.nextString(10),
+      "dob_year" -> Random.nextInt(3000),
+      "dob_month" -> Random.nextInt(12),
+      "gender" -> Random.nextPrintableChar(),
+      "salary" -> Random.nextInt(9999999)
+    )
+    val jsonBoolean = JSONObject(temp).toString()
+    println(jsonBoolean)
+    }
+  }
   def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {
     
     val path = "/home/xs107-bairoy/xenonstack/l2/module4/spark/output"
@@ -448,7 +468,8 @@ object demo extends institute {
     //institute1.temp3()
     //institute1.temp4()
     //institute1.temp5()
-    institute1.broadcastJoins()
+    //institute1.broadcastJoins()
+    institute1.temp6()
   }
 }
 /**

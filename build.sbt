@@ -12,3 +12,6 @@ libraryDependencies += "org.apache.spark" %% "spark-streaming" % "3.1.1" % "prov
 
 // https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10
 libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "3.1.1"
+
+// https://mvnrepository.com/artifact/com.typesafe.play/play-json
+libraryDependencies += "com.typesafe.play" %% "play-json" % "2.10.0-RC2"

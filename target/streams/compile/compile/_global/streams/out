@@ -1,15 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:405:12: value join is not a member of Unit[0m
-[0m[[0m[31merror[0m] [0m[0m    female.join(broadcast(male),[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:405:27: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
-[0m[[0m[31merror[0m] [0m[0m required: org.apache.spark.sql.Dataset[?][0m
-[0m[[0m[31merror[0m] [0m[0m    female.join(broadcast(male),[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:406:25: Unit does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m                  female("country") <=> male("country")).show()[0m
-[0m[[0m[31merror[0m] [0m[0m                        ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/xs107-bairoy/xenonstack/l2/module4/spark/src/main/scala/demo.scala:406:45: Unit does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m                  female("country") <=> male("country")).show()[0m
-[0m[[0m[31merror[0m] [0m[0m                                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone deprecation (since 1.0.6); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
