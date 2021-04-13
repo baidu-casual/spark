@@ -20,9 +20,8 @@ import org.apache.hadoop.mapreduce.lib.input.TextInputFormat
 import org.apache.spark.rdd.RDD
 
 import scala.util.Random
-import play.api.libs.json._
-import play.api.libs.json.{JsNull,Json,JsString,JsValue}
 import scala.util.parsing.json.JSONObject
+import java.io._
 
 
 class institute
@@ -421,18 +420,30 @@ class spark extends institute{
     spark.close()
   }
   def temp6(): Unit = {
+    val filename = Random.nextString(2)+".json"
+    val path="/home/xs107-bairoy/xenonstack/l2/module4/spark_streaming_producer/files/person/"+filename
+    val file = new File(path)
+    val bw = new BufferedWriter(new FileWriter(file))
+    var json="[\n"
     for ( a <- 3 to 100){
     val temp = Map(
-      "id" -> Random.nextInt(500),
+      "id" -> Random.nextInt(10000),
       "name" -> Random.nextString(10),
       "dob_year" -> Random.nextInt(3000),
       "dob_month" -> Random.nextInt(12),
-      "gender" -> Random.nextPrintableChar(),
+      "gender" -> Random.nextString(5),
       "salary" -> Random.nextInt(9999999)
     )
-    val jsonBoolean = JSONObject(temp).toString()
-    println(jsonBoolean)
+    var jsonBoolean = JSONObject(temp).toString()
+    if (a<=99){
+      jsonBoolean+=",\n"
+    }    
+    json+=jsonBoolean
     }
+    json+="\n]"
+    bw.write(json)
+    println(json)
+    bw.close()    
   }
   def saveDfToCsv(df: DataFrame, name: String/*, sep: String = ",", header: Boolean = false*/): Unit = {
     
